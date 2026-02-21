@@ -7,7 +7,7 @@ git branch:'main',url:'https://github.com/charithareddy02/Calculator1.git';
 }
 }
 stage('Complile'){
-stepa{
+steps{
 sh 'javac Calculator.java'
 }
 }
@@ -22,7 +22,7 @@ sh 'java Calculator 30 -5'
 }
 }
 stage('Deploy'){
-stepa{
+steps{
 echo 'Deployment completed'
 }
 }
