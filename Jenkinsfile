@@ -1,27 +1,27 @@
 pipeline{
 agent any
 stages{
-stage('clone'){
+stage('Clone'){
 steps{
 git branch:'main',url:'https://github.com/charithareddy02/Calculator1.git';
 }
 }
-stage('complile'){
+stage('Complile'){
 stepa{
 sh 'javac Calculator.java'
 }
 }
-stage('build'){
+stage('Build'){
 steps{
 sh 'java Calculator 25 5'
 }
 }
-stage('test'){
+stage('Test'){
 steps{
 sh 'java Calculator 30 -5'
 }
 }
-stage('deploy'){
+stage('Deploy'){
 stepa{
 echo 'Deployment completed'
 }
